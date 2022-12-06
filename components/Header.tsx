@@ -1,5 +1,3 @@
-// Disables warning on using img tag on line 10
-/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 
 function Header() {
@@ -7,11 +5,13 @@ function Header() {
         <header className='flex justify-between p-5 max-w-7xl mx-auto'>
             <div className='flex items-center space-x-5'>
                 <Link href='/'>
-                    <img
-                        className='w-44 object-contain cursor-pointer'
-                        src='/icons/logo.png'
-                        alt='Medium Logo'
-                    />
+                    <picture>
+                        <img
+                            className='w-44 object-contain cursor-pointer'
+                            src='/icons/logo.png'
+                            alt='Medium Logo'
+                        />
+                    </picture>
                 </Link>
                 <div className='hidden md:inline-flex items-center space-x-5'>
                     <h3>About</h3>
