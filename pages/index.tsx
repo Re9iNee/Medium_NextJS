@@ -1,10 +1,11 @@
 import Head from "next/head";
 import Image from "next/image";
 import Header from "../components/Header";
+import Info from "../components/Info";
 
 export default function Home() {
     return (
-        <div className=''>
+        <div className='max-w-7xl mx-auto'>
             <Head>
                 <title>Medium Blog</title>
                 <meta
@@ -15,6 +16,7 @@ export default function Home() {
             </Head>
 
             <Header />
+            <Info />
         </div>
     );
 }
