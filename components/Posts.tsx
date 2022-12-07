@@ -1,7 +1,7 @@
+import { urlFor } from "@rootDir>sanity";
+import { Post } from "@types";
 import Link from "next/link";
-import React, { ReactElement } from "react";
-import { sanityClient, urlFor } from "../sanity";
-import { Post } from "../typings";
+import { ReactElement } from "react";
 
 type Props = {
     posts: Post[];
@@ -20,7 +20,7 @@ const Posts = ({ posts }: Props): ReactElement => {
                                 alt=''
                             />
                         </picture>
-                        <div className='flex justify-between p-5 bg-white'>
+                        <div className='flex justify-between p-5'>
                             <div>
                                 <p className='text-lg font-bold'>
                                     {post.title}

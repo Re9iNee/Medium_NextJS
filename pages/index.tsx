@@ -1,9 +1,9 @@
+import Header from "@components/Header";
+import Info from "@components/Info";
+import Posts from "@components/Posts";
+import { sanityClient } from "@rootDir>sanity";
+import { Post } from "@types";
 import Head from "next/head";
-import Header from "../components/Header";
-import Info from "../components/Info";
-import Posts from "../components/Posts";
-import { sanityClient } from "../sanity";
-import { Post } from "../typings";
 
 type Props = {
     posts: Post[];
