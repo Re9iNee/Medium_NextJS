@@ -2,6 +2,7 @@ import Header from "@components/Header";
 import { sanityClient, urlFor } from "@sanityConfig";
 import { Post } from "@types";
 import { GetStaticPathsResult, GetStaticProps } from "next";
+import Image from "next/image";
 import PortableText from "react-portable-text";
 import serializers from "./serializerObject";
 
@@ -14,10 +15,12 @@ const Post = ({ post }: Props) => {
             <Header />
 
             <picture>
-                <img
+                <Image
+                    alt=''
+                    width={0}
+                    height={0}
                     className='w-full h-40 object-cover'
                     src={urlFor(post.mainImage).url()}
-                    alt=''
                 />
             </picture>
 
@@ -28,13 +31,13 @@ const Post = ({ post }: Props) => {
                 </h2>
 
                 <div className='flex items-center space-x-2'>
-                    <picture>
-                        <img
-                            className='h-10 w-10 rounded-full'
-                            src={urlFor(post.author.image).url()}
-                            alt=''
-                        />
-                    </picture>
+                    <Image
+                        alt=''
+                        width={0}
+                        height={0}
+                        className='h-10 w-10 rounded-full'
+                        src={urlFor(post.author.image).url()}
+                    />
 
                     <p className='font-extralight text-sm'>
                         Blog post by{" "}
