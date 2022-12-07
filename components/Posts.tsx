@@ -29,6 +29,7 @@ const Posts = ({ posts }: Props): ReactElement => {
                                     {post.description} by {post.author.name}
                                 </p>
                             </div>
+
                             <picture>
                                 <img
                                     className='h-12 w-12 rounded-full'
