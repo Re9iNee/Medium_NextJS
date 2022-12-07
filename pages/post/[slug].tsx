@@ -1,4 +1,5 @@
 import Header from "@components/Header";
+import HorizontalDivider from "@components/HorizontalDivider";
 import { sanityClient, urlFor } from "@sanityConfig";
 import { Post } from "@types";
 import { GetStaticPathsResult, GetStaticProps } from "next";
@@ -62,6 +63,8 @@ const Post = ({ post }: Props) => {
                     </div>
                 </div>
             </article>
+
+            <HorizontalDivider />
         </main>
     );
 };
