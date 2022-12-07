@@ -1,5 +1,6 @@
 import { urlFor } from "@sanityConfig";
 import { Post } from "@types";
+import Image from "next/image";
 import Link from "next/link";
 import { ReactElement } from "react";
 
@@ -20,7 +21,7 @@ const Posts = ({ posts }: Props): ReactElement => {
                                 alt=''
                             />
                         </picture>
-                        <div className='flex justify-between p-5'>
+                        <div className='flex justify-between p-5 gap-5 flex-nowrap'>
                             <div>
                                 <p className='text-lg font-bold'>
                                     {post.title}
@@ -30,13 +31,14 @@ const Posts = ({ posts }: Props): ReactElement => {
                                 </p>
                             </div>
 
-                            <picture>
-                                <img
-                                    className='h-12 w-12 rounded-full'
-                                    src={urlFor(post.author.image).url()}
-                                    alt=''
-                                />
-                            </picture>
+                            <Image
+                                width={0}
+                                height={0}
+                                sizes='100vw'
+                                className='w-12 h-12 rounded-full'
+                                src={urlFor(post.author.image).url()}
+                                alt=''
+                            />
                         </div>
                     </div>
                 </Link>
