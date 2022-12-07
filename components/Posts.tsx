@@ -1,4 +1,4 @@
-import { urlFor } from "@rootDir>sanity";
+import { urlFor } from "@sanityConfig";
 import { Post } from "@types";
 import Link from "next/link";
 import { ReactElement } from "react";

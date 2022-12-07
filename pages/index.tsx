@@ -1,7 +1,7 @@
 import Header from "@components/Header";
 import Info from "@components/Info";
 import Posts from "@components/Posts";
-import { sanityClient } from "@rootDir>sanity";
+import { sanityClient } from "@sanityConfig";
 import { Post } from "@types";
 import Head from "next/head";
 

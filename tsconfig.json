@@ -16,11 +16,12 @@
         "incremental": true,
         "baseUrl": ".",
         "paths": {
-            "@rootDir>*": ["*"],
-            "@types": ["typings.d.ts"],
+            "@pages/*": ["pages/*"],
             "@styles/*": ["styles/*"],
             "@components/*": ["components/*"],
-            "@pages/*": ["pages/*"]
+
+            "@types": ["typings.d.ts"],
+            "@sanityConfig": ["sanity.js"]
         }
     },
     "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
