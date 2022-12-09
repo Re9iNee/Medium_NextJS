@@ -1,3 +1,4 @@
+import CommentSection from "@components/CommentSection";
 import Header from "@components/Header";
 import HorizontalDivider from "@components/HorizontalDivider";
 import { sanityClient, urlFor } from "@sanityConfig";
@@ -41,7 +42,7 @@ const Post = ({ post }: Props) => {
                     />
 
                     <p className='font-extralight text-sm'>
-                        Blog post by{" "}
+                        Blog post by
                         <span className='text-green-600'>
                             {post.author.name}
                         </span>
@@ -65,6 +66,8 @@ const Post = ({ post }: Props) => {
             </article>
 
             <HorizontalDivider />
+
+            <CommentSection />
         </main>
     );
 };
