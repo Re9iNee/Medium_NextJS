@@ -67,7 +67,7 @@ const Post = ({ post }: Props) => {
 
             <HorizontalDivider />
 
-            <CommentSection />
+            <CommentSection postId={post._id} />
         </main>
     );
 };
