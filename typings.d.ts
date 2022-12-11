@@ -19,3 +19,15 @@ interface Author {
     name: string;
     image: string;
 }
+
+// We use this for form module
+export interface CommentFormInputs {
+    name: string;
+    email: string;
+    comment: string;
+}
+
+// Model => we send this data to back
+export interface CommentModel extends CommentFormInputs {
+    _id: string;
+}

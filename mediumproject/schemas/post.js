@@ -52,6 +52,12 @@ export default {
             title: "Body",
             type: "blockContent",
         },
+        {
+            name: "comment",
+            title: "Comment",
+            type: "array",
+            of: [{ type: "reference", to: { type: "comment" } }],
+        },
     ],
 
     preview: {
