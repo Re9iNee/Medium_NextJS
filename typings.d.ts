@@ -8,6 +8,7 @@ export interface Post {
             url: string;
         };
     };
+    comments: Comment[];
     slug: {
         current: string;
     };
@@ -30,4 +31,17 @@ export interface CommentFormInputs {
 // Model => we send this data to back
 export interface CommentModel extends CommentFormInputs {
     _id: string;
+}
+
+// This is exactly what we receive from database
+export interface Comment extends CommentModel {
+    approved: boolean;
+    post: {
+        _ref: string;
+        _type: string;
+    };
+    _createdAt: string;
+    _rev: string;
+    _type: string;
+    _updatedAt: string;
 }

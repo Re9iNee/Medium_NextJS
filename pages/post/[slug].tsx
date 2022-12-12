@@ -1,3 +1,4 @@
+import CommentList from "@components/CommentList";
 import CommentSection from "@components/CommentSection";
 import Header from "@components/Header";
 import HorizontalDivider from "@components/HorizontalDivider";
@@ -12,6 +13,8 @@ type Props = {
     post: Post;
 };
 const Post = ({ post }: Props) => {
+    console.log(post);
+
     return (
         <main>
             <Header />
@@ -68,6 +71,8 @@ const Post = ({ post }: Props) => {
             <HorizontalDivider />
 
             <CommentSection postId={post._id} />
+
+            <CommentList comments={post.comments} />
         </main>
     );
 };
@@ -110,6 +115,11 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
                 name,
                 image
             },
+            "comments": *[
+            _type == "comment" &&
+            post._ref == ^._id && 
+            approved == true
+            ],
             description,
             mainImage,
             slug,

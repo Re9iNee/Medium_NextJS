@@ -1,5 +1,5 @@
 import { sanityClient } from "@sanityConfig";
-import { FormInputTypes } from "@types";
+import { CommentModel } from "@types";
 import { NextApiRequest, NextApiResponse } from "next";
 
 export default function CommentsHandler(
@@ -20,7 +20,7 @@ export default function CommentsHandler(
 }
 
 async function createComment(req: NextApiRequest, res: NextApiResponse) {
-    const requestBody: FormInputTypes = JSON.parse(req.body);
+    const requestBody: CommentModel = JSON.parse(req.body);
     const { _id, ...restOfBody } = requestBody;
 
     try {
