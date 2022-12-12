@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ReactElement } from "react";
 
 const Info = (): ReactElement => {
@@ -17,13 +18,13 @@ const Info = (): ReactElement => {
                 </h2>
             </div>
 
-            <picture>
-                <img
-                    className='hidden md:inline-flex h-32 lg:h-full'
-                    src='https://accountabilitylab.org/wp-content/uploads/2020/03/Medium-logo.png'
-                    alt=''
-                />
-            </picture>
+            <Image
+                alt='logo'
+                width={0}
+                height={32}
+                className='hidden md:inline-flex h-32 lg:h-full'
+                src='https://accountabilitylab.org/wp-content/uploads/2020/03/Medium-logo.png'
+            />
         </div>
     );
 };

@@ -16,10 +16,10 @@ const Posts = ({ posts }: Props): ReactElement => {
                     <div className='border rounded-lg group cursor-pointer overflow-hidden'>
                         <Image
                             width={0}
-                            height={0}
+                            height={60}
+                            alt='post main image'
                             className='h-60 w-full object-cover group-hover:scale-105 transition-transform duration-200 ease-in-out'
                             src={urlFor(post.mainImage).url()}
-                            alt=''
                         />
 
                         <div className='flex justify-between p-5 gap-5 flex-nowrap'>
@@ -33,12 +33,11 @@ const Posts = ({ posts }: Props): ReactElement => {
                             </div>
 
                             <Image
-                                width={0}
-                                height={0}
-                                sizes='100vw'
-                                className='w-12 h-12 rounded-full'
+                                width={12}
+                                height={12}
+                                alt='Author Image'
+                                className='rounded-full'
                                 src={urlFor(post.author.image).url()}
-                                alt=''
                             />
                         </div>
                     </div>
