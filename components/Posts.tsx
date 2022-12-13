@@ -33,10 +33,10 @@ const Posts = ({ posts }: Props): ReactElement => {
                             </div>
 
                             <Image
-                                width={12}
-                                height={12}
-                                alt='Author Image'
-                                className='rounded-full'
+                                width={10}
+                                height={10}
+                                alt='author image'
+                                className='h-10 w-10 rounded-full'
                                 src={urlFor(post.author.image).url()}
                             />
                         </div>
