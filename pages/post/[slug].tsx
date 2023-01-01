@@ -37,13 +37,14 @@ const Post = ({ post }: Props) => {
         <main>
             <Header />
 
-            <Image
-                width={0}
-                height={40}
-                alt='post main image'
-                className='w-full h-40 object-cover'
-                src={urlFor(post.mainImage).url()}
-            />
+            <div className='w-full h-40 relative'>
+                <Image
+                    fill
+                    alt='post main image'
+                    className='object-cover'
+                    src={urlFor(post.mainImage).url()}
+                />
+            </div>
 
             <article className='max-w-3xl mx-auto p-5'>
                 <h1 className='text-3xl mt-10 mb-3'>{post.title}</h1>
