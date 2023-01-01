@@ -3,7 +3,6 @@ import { Post } from "@types";
 import Image from "next/image";
 import Link from "next/link";
 import { ReactElement } from "react";
-import TailwindImage from "./TailwindImage";
 
 type Props = {
     posts: Post[];
