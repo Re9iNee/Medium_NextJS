@@ -31,8 +31,6 @@ type Props = {
     post: Post;
 };
 const Post = ({ post }: Props) => {
-    console.log(post);
-
     return (
         <main>
             <Header />
@@ -72,16 +70,18 @@ const Post = ({ post }: Props) => {
                 </div>
 
                 <div>
-                    <div className='mt-10'>
-                        <PortableText
-                            serializers={serializers}
-                            projectId={
-                                process.env.NEXT_PUBLIC_SANITY_PROJECT_ID
-                            }
-                            dataset={process.env.NEXT_PUBLIC_SANITY_DATASET}
-                            content={post.body}
-                        />
-                    </div>
+                    {post.body && (
+                        <div className='mt-10'>
+                            <PortableText
+                                serializers={serializers}
+                                projectId={
+                                    process.env.NEXT_PUBLIC_SANITY_PROJECT_ID
+                                }
+                                dataset={process.env.NEXT_PUBLIC_SANITY_DATASET}
+                                content={post.body}
+                            />
+                        </div>
+                    )}
                 </div>
             </article>
 

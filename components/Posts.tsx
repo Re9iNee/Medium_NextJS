@@ -9,12 +9,6 @@ type Props = {
 };
 
 const Posts = ({ posts }: Props): ReactElement => {
-    // let authImageUrl = posts.map((post) => {
-    //     return urlFor(post.author.image).url();
-    // });
-
-    // console.log(authImageUrl.length, new Set([...authImageUrl]));
-
     return (
         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 p-2 md:p-6'>
             {posts.map((post) => (
