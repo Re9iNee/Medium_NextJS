@@ -21,9 +21,9 @@ function Header() {
                     </h3>
                 </div>
             </div>
-            <div className='flex items-center space-x-5 text-green-800'>
+            <div className='flex items-center space-x-5 dark:text-green-400 text-green-800'>
                 <h3>Sign In</h3>
-                <h3 className='border px-4 py-1 rounded-full border-green-800'>
+                <h3 className='border px-4 py-1 rounded-full dark:border-green-400 border-green-800'>
                     Get Started
                 </h3>
             </div>
