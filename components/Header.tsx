@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import mediumLogo from "../public/icons/logo.png";
+import mediumLogo from "../public/icons/logo.svg";
 
 function Header() {
     return (
